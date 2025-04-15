@@ -42,6 +42,7 @@ DOOM_WAD = {
     ]
   },
   "retreat": {
+    "highlight": "error",
     "text": "You flee back to the bunk, only to find a cacodemon munching your pillow. It turns. You die tired.",
     "options": []
   },
@@ -65,6 +66,7 @@ DOOM_WAD = {
     ]
   },
   "scream": {
+    "highlight": "error",
     "text": "You scream. The Baron laughs. Then it turns you into jam. Game over, civilian.",
     "options": []
   },
@@ -94,6 +96,7 @@ DOOM_WAD = {
     ]
   },
   "continue": {
+    "highlight": "info",
     "text": "You live. For now. You’ve got the keycard, a shotgun, and a lot of rage. Time to clear this base.",
     "options": []
   },
@@ -105,6 +108,7 @@ DOOM_WAD = {
     ]
   },
   "save-it": {
+    "highlight": "info",
     "text": "You save your shot. Smart. The Cyberdemon appears. You fire. Everything goes white. Victory.",
     "options": []
   },
@@ -115,18 +119,22 @@ DOOM_WAD = {
     ]
   },
   "use-bfg": {
+    "highlight": "info",
     "text": "The BFG hums... then obliterates everything in a green flash. No more demons. Just smoke and silence.",
     "options": []
   },
   "grab-bfg": {
+    "highlight": "info",
     "text": "You grab the BFG and finish the job. Cyberdemon down. Mars is safe—for now.",
     "options": []
   },
   "to-earth": {
+    "highlight": "info",
     "text": "You step through the portal and return to Earth. You’re safe. But Hell remembers you.",
     "options": []
   },
   "to-hell": {
+    "highlight": "info",
     "text": "You enter the Hell portal, chainsaw roaring. Time to rip and tear... until it is done.",
     "options": []
   }

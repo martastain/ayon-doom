@@ -26,7 +26,7 @@ ENTRYPOINT = SimpleActionManifest(
     config_fields=SimpleForm().select(
         "difficulty",
         label="Difficulty",
-        value="easy", # default value
+        value="easy",  # default value
         options=[
             {"value": "baby", "label": "I'm too young to die!"},
             {"value": "easy", "label": "Hey, not too rough!"},
@@ -81,7 +81,8 @@ class DoomAddon(BaseServerAddon):
                     .hidden("ended", True)
                     .label(
                         "A wild spider mastermind appeared and killed you. "
-                        "This difficulty level is not fair at all."
+                        "This difficulty level is not fair at all.",
+                        highlight="error",
                     ),
                 )
 
@@ -98,7 +99,7 @@ class DoomAddon(BaseServerAddon):
             raise ValueError(f"Invalid location: {location}")
 
         form = SimpleForm()
-        form.label(loc_data["text"])
+        form.label(loc_data["text"], highlight=loc_data.get("highlight"))
         if options := loc_data.get("options", []):
             form.select(
                 "location",
@@ -116,7 +117,6 @@ class DoomAddon(BaseServerAddon):
         # When we're returning a form, message is used as the form header
         # Otherwise, message is just toasted
         return await executor.get_server_action_response(message="DOOM", form=form)
-
 
     async def create_config_hash(
         self,
