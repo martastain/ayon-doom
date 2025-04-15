@@ -1,6 +1,6 @@
 DOOM_WAD = {
   "start": {
-    "text": "UAC Base, Mars. Alarms blare. You wake up in your bunk, smell of ozone and burnt meat in the air. Your comm crackles: 'Containment breach. Demons inbound.'",
+    "text": "UAC Base, Mars. Alarms blare. You wake up in your bunk, smell of ozone and burnt meat in the air. Your comm crackles: *Containment breach. Demons inbound.*",
     "options": [
       { "value": "grab-shotgun", "label": "Grab your shotgun" },
       { "value": "go-fist", "label": "Go in fists blazing" }
@@ -28,7 +28,7 @@ DOOM_WAD = {
     ]
   },
   "run-past": {
-    "text": "You sprint past the zombie, but trip over a dismembered leg. You look up—Baron of Hell. Oops.",
+    "text": "You sprint past the zombie, but trip over a dismembered leg. You look up — **Baron of Hell**. Oops.",
     "options": [
       { "value": "shoot-up", "label": "Blast him from the floor" },
       { "value": "scream", "label": "Scream like a mortal" }
@@ -43,11 +43,11 @@ DOOM_WAD = {
   },
   "retreat": {
     "highlight": "error",
-    "text": "You flee back to the bunk, only to find a cacodemon munching your pillow. It turns. You die tired.",
+    "text": "You flee back to the bunk, only to find a **cacodemon** munching your pillow. It turns. You die tired.",
     "options": []
   },
   "search-body": {
-    "text": "Red keycard acquired. Growl intensifies. You spin around and see... Cyberdemon. Why always Cyberdemon?",
+    "text": "Red keycard acquired. Growl intensifies. You spin around and see... **Cyberdemon**. Why always Cyberdemon?",
     "options": [
       { "value": "run-to-armory", "label": "Open armory and pray" },
       { "value": "charge-it", "label": "CHAAAAARGE!" }
@@ -60,7 +60,7 @@ DOOM_WAD = {
     ]
   },
   "shoot-up": {
-    "text": "Boom! Right in the horned face. Baron falls, but not before leaving scorch marks on your armor.",
+    "text": "**Boom!** Right in the horned face. Baron falls, but not before leaving scorch marks on your armor.",
     "options": [
       { "value": "continue", "label": "Stagger onward, badass" }
     ]
@@ -84,13 +84,13 @@ DOOM_WAD = {
     ]
   },
   "run-to-armory": {
-    "text": "The armory slides open. Inside: BFG9000. You grin.",
+    "text": "The armory slides open. Inside: **BFG9000**. You grin.",
     "options": [
       { "value": "use-bfg", "label": "Use the BFG!" }
     ]
   },
   "charge-it": {
-    "text": "You charge the Cyberdemon and uppercut it with your shotgun. It’s stunned. You’re a god now.",
+    "text": "You charge the **Cyberdemon** and uppercut it with your shotgun. It’s stunned. You’re a god now.",
     "options": [
       { "value": "grab-bfg", "label": "Grab BFG while it’s down" }
     ]
@@ -101,7 +101,7 @@ DOOM_WAD = {
     "options": []
   },
   "blow-door": {
-    "text": "BOOM. You shortcut right to the portal room. One portal to Earth, one to Hell. Choose wisely.",
+    "text": "**BOOM**. You shortcut right to the portal room. One portal to Earth, one to Hell. Choose wisely.",
     "options": [
       { "value": "to-earth", "label": "Escape to Earth" },
       { "value": "to-hell", "label": "Take the fight to Hell" }
@@ -109,7 +109,7 @@ DOOM_WAD = {
   },
   "save-it": {
     "highlight": "info",
-    "text": "You save your shot. Smart. The Cyberdemon appears. You fire. Everything goes white. Victory.",
+    "text": "You save your shot. Smart. The **Cyberdemon** appears. You fire. Everything goes white. Victory.",
     "options": []
   },
   "grab-chainsaw": {
