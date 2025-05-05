@@ -75,9 +75,9 @@ class DoomAddon(BaseServerAddon):
             if config.get("difficulty") == "nightmare" and location != "start":
                 # Nightmare difficulty is not even remotely fair.
                 # We kill you as soon you leave the starting location
-                return await executor.get_server_action_response(
-                    message="You died",
-                    form=SimpleForm()
+                return await executor.get_form_response(
+                    title="You are dead!",
+                    fields=SimpleForm()
                     .hidden("ended", True)
                     .label(
                         "A wild spider mastermind appeared and killed you. "
@@ -100,6 +100,7 @@ class DoomAddon(BaseServerAddon):
 
         form = SimpleForm()
         form.label(loc_data["text"], highlight=loc_data.get("highlight"))
+        submit_button = "Continue"
         if options := loc_data.get("options", []):
             form.select(
                 "location",
@@ -107,16 +108,18 @@ class DoomAddon(BaseServerAddon):
                 options=loc_data["options"],
                 value=options[0]["value"],
             )
+
         else:
             # No options, so the game is over
             # Next time user submits the form,
             # We just show the game over message
             # and finaize the action
             form.hidden("ended", True)
+            submit_button = None
 
         # When we're returning a form, message is used as the form header
         # Otherwise, message is just toasted
-        return await executor.get_server_action_response(message="DOOM", form=form)
+        return await executor.get_form_response(fields=form, title="DOOM", submit_label=submit_button)
 
     async def create_config_hash(
         self,
